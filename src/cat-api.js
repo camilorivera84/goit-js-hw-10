@@ -46,7 +46,8 @@ function showBreedImage(index) {
     storedBreeds[index].wikipedia_url;
 }*/
 // Función para hacer una petición HTTP a la colección de razas
-const apiKey = 'tu kays';
+const apiKey =
+  'live_NgM5732M1DdT2hKPvftcsLGiaon7mx6pVV9RWVspQOc1Xx45Jmu9wd58sURDU31D';
 export function fetchBreeds() {
   const url = 'https://api.thecatapi.com/v1/breeds';
   return fetch(url, {
@@ -61,7 +62,7 @@ export function fetchBreeds() {
     });
 }
 export function fetchCatByBreed(breedId) {
-  const url = `https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}&api_key=${apiKey}`;
+  const url = `https://api.thecatapi.com/v1/images/search/?breed_ids=${breedId}&api_key=${apiKey}`;
   return fetch(url)
     .then(response => response.json())
     .then(data => data)
