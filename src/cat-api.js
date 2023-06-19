@@ -61,8 +61,10 @@ export function fetchBreeds() {
       throw error;
     });
 }
+
 export function fetchCatByBreed(breedId) {
   const url = `https://api.thecatapi.com/v1/images/search/?breed_ids=${breedId}&api_key=${apiKey}`;
+
   return fetch(url)
     .then(response => response.json())
     .then(data => data)

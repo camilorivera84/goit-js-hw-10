@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+}
+.information {
+  width: 500px;
+  margin-left: 20px;
+}
+.is-hidden {
+  display: none;
+  visibility: hidden;
+}

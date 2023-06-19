@@ -49,6 +49,8 @@ function createCardCat(cat) {
   </div>`;
   catInfoEl.innerHTML = markup;
 }*/
+import './css/style.css';
+import Notiflix from 'notiflix';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 
 const selectEl = document.querySelector('.breed-select');
@@ -92,11 +94,12 @@ function createCardCat(cat) {
   const markup = `
     <div class="wrapper">
       <img src="${cat[0].url}" alt="${name}" width="300px"/>
+      <div class="information">
       <h1>${name}</h1>
       <p>${description}</p>
       <p>
         <b>Temperament:</b> ${temperament}
-      </p>
+      </p></div>
     </div>`;
   catInfoEl.innerHTML = markup;
 }
